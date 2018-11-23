@@ -1,6 +1,5 @@
 <div class="container">
-  <h1>Cocktails#new</h1>
-  <%= render 'form' %>
+  <h1><%= @cocktail.name %> </h1>
   <%=  link_to "Voir tous les cocktails", cocktails_path %>
-
+  <%= render 'form' %>
 </div>

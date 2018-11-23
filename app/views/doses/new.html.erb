@@ -1,14 +1,14 @@
-<h1>Doses#new</h1>
 <div class="container">
+  <h1>Editer <%=  @cocktail.name %></h1>
+  <h2> Ingredient(s) actuel(s)</h2>
+  <ul>
+    <% @cocktail.doses.each do |dose|  %>
+      <li><%= dose.description  %> <%= dose.ingredient.name  %></li>
+    <% end %>
+  </ul>
+  <%=  link_to "Retourner au cocktail", cocktail_path(@cocktail.id) %>
+  <%=  link_to "Voir tous les cocktails", cocktails_path %>
 
- <h1>Doses#new</h1>
-
-
-
- <p>Find me in app/views/doses/new.html.erb</p>
- <%= simple_form_for [@cocktail, @dose] do |f| %>
- <%= f.association :ingredient %>
- <%= f.input :description  %>
- <%= f.submit "add a dose" %>
- <% end %>
+  <h2>Ajouter des ingrédients </h2>
+  <%= render 'form' %>
 </div>

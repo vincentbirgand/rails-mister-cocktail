@@ -1,5 +1,5 @@
 
-<div class="banner"style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'edi-libedinsky-709320-unsplash' %>');">><h1>Tous les Cocktails</h1>
+<div class="banner"style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'edi-libedinsky-709320-unsplash.jpg' %>');">><h1>Tous les Cocktails</h1>
   </div>
 
 <div class="container">
@@ -22,19 +22,3 @@
 
 
 
-<div class="container">
-  <div class="row">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'verre.jpg'%>');">
-          <div class="card-description">
-            <h2><%= cocktail.name %></h2>
-          </div>
-          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-  </div>
-</div>
